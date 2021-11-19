@@ -21,6 +21,7 @@ app.get("/api/compliment", (req, res) => {
   res.status(200).send(randomCompliment);
   
 });
+
 app.get("/api/fortune", (req, res) => {
   const fortune = ["Sometimes, spilling ketchup on your favorite shirt means no more nice shirt today.",
 					          "When it is cold out, wear something warm",
@@ -32,8 +33,23 @@ app.get("/api/fortune", (req, res) => {
 
   res.status(200).send(randomFortune);
   
+
+});app.get("/api/notCompliment", (req, res) => {
+  const notCompliment = ["Your eyebrows smell funny",
+					          "Hey look.... made you look",
+					          "knock knock...",
+  ];
+
+  let randomIndex = Math.floor(Math.random() * notCompliment.length);
+  let randomnotCompliment = notCompliment[randomIndex];
+
+  res.status(200).send(randomnotCompliment);
+  
 });
+
 
 app.listen(4000, () => console.log("COMPLIMENTS initializing...... running on 4000"));
 
-app.listen(4001, () => console.log("FORTUNES initializing...... running on 4001"));
+app.listen(4001, () => console.log("NOTCOMPLIMENT initializing...... running on 4001"));
+
+app.listen(4002, () => console.log("FORTUNES initializing...... running on 4002"));

@@ -2,16 +2,18 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="container">
-    <button class="button complimentButton">Get a compliment</button>
+    <button id="complimentButton">Compliment</button>
 
     <div>
     </div>
     <div>
     </div>
 
-    <button class="button fortuneButton">Get a Fortune</button>
+    <button id="fortuneButton">Fortune</button>
+    <button id="notButton">Noncompliment</button>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
       document.getElementById("complimentButton").onclick = function () {
@@ -21,15 +23,26 @@
               alert(data);
             });
       };
-      </script>
-      <script>
+      
+      
+
       document.getElementById("fortuneButton").onclick = function () {
-        axios.get("http://localhost:4001/api/fortune/")
+        axios.get("http://localhost:4002/api/fortune/")
             .then(function (response) {
               const data = response.data;
               alert(data);
             });
       };
+
+      document.getElementById("notButton").onclick = function () {
+        axios.get("http://localhost:4001/api/notCompliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+
+
     </script>
   </body>
 </html>
