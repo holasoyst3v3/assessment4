@@ -61,8 +61,8 @@ app.get("/api/fortune", (req, res) => {
 //**************************************************//
 // document is not defined ERROR with code below can't troubleshoot //
 
-document.querySelector("form").addEventListener("submit",addQuote);
-const message = document.querySelector('#message')
+// document.querySelector("form").addEventListener("submit",addQuote);
+// const message = document.querySelector('#message')
 
 function addQuote(event){
     event.preventDefault();
