@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Back End Assessment</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body class="container">
-    <button id="complimentButton">Compliment</button>
 
-    <div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INDEX PAGE</title>
+  <link rel="stylesheet" href="indexstyle.css">
+  <div class="dropdown">
+    <button class="dropbtn" style="position: fixed;">Menu</button>
+    <!-- <button class="dropbtn" style="position: fixed;">Menu</button> -->
+    <div class="dropdown-content">
+      <a href="./index.html">INDEX</a>
+      <a href="./input.html">WALL</a>
     </div>
-    <div>
-    </div>
+  </div>
+</head>
 
-    <button id="fortuneButton">Fortune</button>
-    <button id="notButton">Noncompliment</button>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-      document.getElementById("complimentButton").onclick = function () {
-        axios.get("http://localhost:4000/api/compliment/")
-            .then(function (response) {
-              const data = response.data;
-              alert(data);
-            });
-      };
-      
-      
+<main>
+  <h1>
+    <!-- <p style="position:fixed; left: 330px; top:0px; background-color:yellow;"> -->
+    <p style="left: 330px; top:0px; background-color:yellow;">  WELCOME TO NONSENSICAL FEEL GOOD NONSENSE
+    </p>
+  </h1>
+</main>
 
-      document.getElementById("fortuneButton").onclick = function () {
-        axios.get("http://localhost:4002/api/fortune/")
-            .then(function (response) {
-              const data = response.data;
-              alert(data);
-            });
-      };
+<body>
+<!-- <body class="container"> -->
+  
+  <button id="complimentButton">Compliment</button>
 
-      document.getElementById("notButton").onclick = function () {
-        axios.get("http://localhost:4001/api/notCompliment/")
-            .then(function (response) {
-              const data = response.data;
-              alert(data);
-            });
-      };
+  <div>
+  </div>
+  <div>
+  </div>
+
+  <button id="fortuneButton">Fortune</button>
+  <button id="notButton">Noncompliment</button>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    document.getElementById("complimentButton").onclick = function () {
+      axios.get("http://localhost:4000/api/compliment/")
+        .then(function (response) {
+          const data = response.data;
+          alert(data);
+        });
+    };
 
 
-    </script>
-  </body>
+
+    document.getElementById("fortuneButton").onclick = function () {
+      axios.get("http://localhost:4002/api/fortune/")
+        .then(function (response) {
+          const data = response.data;
+          alert(data);
+        });
+    };
+
+    document.getElementById("notButton").onclick = function () {
+      axios.get("http://localhost:4001/api/notCompliment/")
+        .then(function (response) {
+          const data = response.data;
+          alert(data);
+        });
+    };
+
+  </script>
+</body>
+
 </html>
+
+<!-- style="position:fixed; left: 330px; top:0px; background-color:yellow;" -->

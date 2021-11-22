@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>INPUT PAGE</title>
+    <link rel="stylesheet" href="input.css">
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="./index.html">INDEX</a>
+            <a href="./input.html">WALL</a>
+        </div>
+    </div>
+</head>
+
+<!-- <body class="container"> -->
+<body>
+
+    <main>
+        <h1>
+            <p style="background-color:yellow;">OUR LOVELY WALL</p>
+        </h1>
+        <section>
+            <form>
+                <input placeholder='ADD SOME LOVE TO OUR WALL!' size=100 />
+                <button>Submit</button>
+            </form>
+        </section>
+        <ul>
+        </ul>
+        <aside id="message"></aside>
+    </main>
+    <script src='assessment-backend/server/index.js'></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js%22%3E"></script> -->
+
+    <!-- KEPT GETTING AXIOS IS NOT DEFINED ERROR. COULDNT TROUBLESHOOT -->
+    <!-- <script>
+    
+        axios.post('http://localhost:4000/api/quotes', body)
+        axios.then(res => {
+            theInput.value = ''
+
+            const listSection = document.querySelector('ul');
+            listSection.innerHTML = '';
+
+            for(let i = 0; i < res.data.length; i++) {
+              const newLi = document.createElement('li')
+
+              newLi.textContent = res.data[i]
+
+              listSection.appendChild(newLi)
+            }
+
+          })
+          .catch(err => console.log(err));
+
+
+        theInput.focus();
+
+    </script> -->
+</body>
+
+</html>
