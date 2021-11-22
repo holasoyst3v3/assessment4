@@ -59,10 +59,10 @@ app.get("/api/fortune", (req, res) => {
 
                   // WALL PAGE CODE//
 //**************************************************//
-// Document not defined ERROR with code below //
+// document is not defined ERROR with code below can't troubleshoot //
 
-// document.querySelector("form").addEventListener("submit",addQuote);
-// const message = document.querySelector('#message')
+document.querySelector("form").addEventListener("submit",addQuote);
+const message = document.querySelector('#message')
 
 function addQuote(event){
     event.preventDefault();
@@ -97,11 +97,6 @@ function deleteQuote(event){
 
 function crossOffQuote(event){
     event.target.classList.toggle("checked")
-    // if (event.target.classList.contains("checked") === true) {
-    //     message.textContent = `${event.target.textContent} watched!`
-    // } else {
-    //     message.textContent = `${event.target.textContent} added yet again...`
-    // }
     revealMessage()
 }
 function revealMessage() {
