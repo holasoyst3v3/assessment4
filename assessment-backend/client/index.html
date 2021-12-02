@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>INDEX PAGE</title>
   <link rel="stylesheet" href="indexstyle.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- <script src='./server/index.js'></script> -->
   <div class="dropdown">
     <button class="dropbtn" style="position: fixed;">Menu</button>
     <!-- <button class="dropbtn" style="position: fixed;">Menu</button> -->
@@ -18,14 +20,14 @@
 <main>
   <h1>
     <!-- <p style="position:fixed; left: 330px; top:0px; background-color:yellow;"> -->
-    <p style="left: 330px; top:0px; background-color:yellow;">  WELCOME TO NONSENSICAL FEEL GOOD NONSENSE
+    <p style="left: 330px; top:0px; background-color:yellow;"> WELCOME TO NONSENSICAL FEEL GOOD NONSENSE
     </p>
   </h1>
 </main>
 
 <body>
-<!-- <body class="container"> -->
-  
+  <!-- <body class="container"> -->
+
   <button id="complimentButton">Compliment</button>
 
   <div>
@@ -35,8 +37,7 @@
 
   <button id="fortuneButton">Fortune</button>
   <button id="notButton">Noncompliment</button>
-  <!-- <script src='./server/index.js'></script> -->
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   <script>
     document.getElementById("complimentButton").onclick = function () {
       axios.get("http://localhost:4000/api/compliment/")

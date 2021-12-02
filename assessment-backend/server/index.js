@@ -47,15 +47,15 @@ app.get("/api/fortune", (req, res) => {
   
 });
 
-// const input = [];
+const input = [];
 
-// app.post('api/input;', (req,res) => {
-//   input.push(req.body.newInput)
+app.post('/api/input', (req,res) => {
+  input.push(req.body.newInput)
 
-//   input.reverse();
-//   res.status(200).send(input)
+  input.reverse();
+  res.status(200).send(input)
 
-// });
+});
 
                   // WALL PAGE CODE//
 //**************************************************//
@@ -64,41 +64,41 @@ app.get("/api/fortune", (req, res) => {
 // document.querySelector("form").addEventListener("submit",addQuote);
 // const message = document.querySelector('#message')
 
-function addQuote(event){
-    event.preventDefault();
-    let inputField = document.querySelector('input')
+// function addQuote(event){
+//     event.preventDefault();
+//     let inputField = document.querySelector('input')
     
-    const quote = document.createElement('li')
+//     const quote = document.createElement('li')
     
-    const listQuote = document.createElement('span');
-    listQuote.textContent = inputField.value;
-    listQuote.addEventListener("click", crossOffQuote);
-    quote.appendChild(listQuote);
+//     const listQuote = document.createElement('span');
+//     listQuote.textContent = inputField.value;
+//     listQuote.addEventListener("click", crossOffQuote);
+//     quote.appendChild(listQuote);
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "x";
-    deleteBtn.addEventListener("click", deleteQuote);
-    quote.appendChild(deleteBtn);
+//     const deleteBtn = document.createElement("button");
+//     deleteBtn.textContent = "x";
+//     deleteBtn.addEventListener("click", deleteQuote);
+//     quote.appendChild(deleteBtn);
 
 
-    const list = document.querySelector("ul");
-    list.appendChild(quote);
+//     const list = document.querySelector("ul");
+//     list.appendChild(quote);
 
-    message.textContent = `New quote added to the Wall.`
-    revealMessage()
+//     message.textContent = `New quote added to the Wall.`
+//     revealMessage()
 
-    inputField.value = ""
-}
+//     inputField.value = ""
+// }
 
-function deleteQuote(event){
-    revealMessage()
-    event.target.parentNode.remove();
-}
+// function deleteQuote(event){
+//     revealMessage()
+//     event.target.parentNode.remove();
+// }
 
-function crossOffQuote(event){
-    event.target.classList.toggle("checked")
-    revealMessage()
-}
+// function crossOffQuote(event){
+//     event.target.classList.toggle("checked")
+//     revealMessage()
+// }
 function revealMessage() {
     message.classList.remove('hide')
     setTimeout(() => {
